@@ -1,0 +1,47 @@
+Bit Manipulation By Hand:
+	1. 0110 + 0110 is the same as 0110 * 2, which is equivalent to shifting 0110 left by 1.
+	2. 0100 equals 4, and multiplying by 4 is the same as left shifting twice. So 0011 * 4
+		is equal to 1100.
+	3. If you XOR a bit with its own negative value, you will always get 1. So a^(~a) will be a 
+		series of 1s.
+	4. ~0 is a sequence of 1s, so ~0 << 2 is s followed bt two 0s. ANDing that with another value
+		will clear the last two bits of the value.
+Bit Facts and Tricks:
+
+	x ^ 0s = x
+	x ^ 1s = ~x
+	x ^ x  = 0
+
+	x & 0s = 0
+	x & 1s = x
+	x & x  = x
+
+	x | 0s = x
+	x | 1s = 1s
+	x | x  = x
+
+Two's Complement and Negative Numbers
+
+	A negative number is represented as the two's complement of its absolute value (with a 1 in its
+	sign bit to indicate that it is negative).
+
+	To achieve this:
+		1. Take a number such as 5, which is represented as: 0 101 (the first bit will be the sign).
+		2. Flip all the bits to get: 1 010
+		3. Add one to this number: 1 011
+
+Arithmetic vs. Logical Right Shift
+	
+	In an arithmetic right shift, we shift values to the right but keep the same sign bit. This is
+	roughly the same as dividing by 2.
+	( >> operator)
+		10110101 = -75
+		11011010 = -38
+
+	In a logical right shift, we shift values to the right and put a zero in the sign bit.
+	( >>> operator)
+		10110101 = -75
+		01011010 =  90
+
+
+
